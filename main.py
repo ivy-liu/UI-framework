@@ -28,9 +28,7 @@ def CreatSuite():
             
     return testUnit
 
-
 testCase=CreatSuite()
-
 
 
 def gettime():
@@ -55,7 +53,7 @@ if os.path.exists(single_report):
         runner=HTMLTestRunner(verbosity=2,stream=fp,title='UI自动化测试demo报告',description='描述test试试')
         #运行测试用例
         runner.run(testCase)
-        fp.flush()#缓存写进文件，等下试试不写
+        # fp.flush()#缓存写进文件，等下试试不写，不要也可以，没毛病
     except Exception as e:
         print(e)
     finally:
@@ -75,23 +73,10 @@ else:
         runner=HTMLTestRunner(verbosity=2,stream=fp,title='UI自动化测试demo报告',description='描述test试试')
         #运行测试用例
         runner.run(testCase)
-        fp.flush()#缓存写进文件，等下试试不写
+        # fp.flush()#缓存写进文件，等下试试不写，不要也可以，没毛病
     except Exception as e:
         print(e)
     finally:
         fp.close()
 
 
-
-
-
-
-
-
-
-# sys.argv，其实就是一个list，
-# 它是sys模块下的一个全局变量，
-# 第一个元素是模块名、后面是依次传入的参数，
-# 比如可以这样传入 pyton temp.py a b c d，一共传入a、b、c、d四个参数
-# len(sys.argv) == 5
-# 那么sys.argv[0]  == "temp.py"   sys.argv[1] == "a"    sys.argv[2] == "b"
