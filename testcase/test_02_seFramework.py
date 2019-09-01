@@ -9,7 +9,7 @@ import time
 import unittest
 import os,sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from tools.HTMLTestRunner_CN_Chart_Screen import HTMLTestRunner
+# from libs.HTMLTestRunner_CN_Chart_Screen import HTMLTestRunner
 
 class TestSearch02(unittest.TestCase):
     """测试类02"""
@@ -21,13 +21,13 @@ class TestSearch02(unittest.TestCase):
     def tearDown(self):
         time.sleep(5)
         self.driver.quit()
-    def test_01_search(self):
-        """测试搜索的演示02-01"""
+    def test_03_search(self):
+        """测试搜索的演示-03"""
         self.driver.get(self.base_url)
         self.driver.find_element("id","words").send_keys("自动化")
         self.driver.find_element("class name","btn-default").click()
-    def test_02_search(self):
-        """测试搜索的演示02-02"""
+    def test_04_search(self):
+        """测试搜索的演示-04"""
         self.driver.get(self.base_url)
         self.driver.find_element("id","words").send_keys("脱口秀")
         self.driver.find_element("class name","btn-default").click()

@@ -308,9 +308,9 @@ function hide_img(obj){
         
     <div class='page-header'>
         <h1>UI自动化测试demo报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-08-31 23:21:47</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:33.187822</p>
-<p class='attribute'><strong>状态:</strong> 通过 2 错误 1</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-09-01 13:51:03</p>
+<p class='attribute'><strong>运行时长:</strong> 0:01:40.460825</p>
+<p class='attribute'><strong>状态:</strong> 通过 6</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>描述test试试</p></div>
@@ -344,7 +344,7 @@ function hide_img(obj){
         </tr>
         
     <tr class='passClass'>
-        <td>test_01_seFramework.TestSearch01: 测试类</td>
+        <td>test_01_seFramework.TestSearch01: 测试类01</td>
         <td>2</td>
         <td>2</td>
         <td>0</td>
@@ -354,58 +354,61 @@ function hide_img(obj){
     </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_01_search: 测试搜索的演示01</div></td>
+    <td class='none'><div class='testcase'>test_01_search: 测试搜索的演示-01</div></td>
     <td colspan='5' align='center'>通过</td>
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_02_search: 测试搜索的演示02</div></td>
+    <td class='none'><div class='testcase'>test_02_search: 测试搜索的演示-02</div></td>
     <td colspan='5' align='center'>通过</td>
 </tr>
 
-    <tr class='errorClass'>
-        <td>unittest.loader._FailedTest</td>
-        <td>1</td>
+    <tr class='passClass'>
+        <td>test_02_seFramework.TestSearch02: 测试类02</td>
+        <td>2</td>
+        <td>2</td>
         <td>0</td>
         <td>0</td>
-        <td>1</td>
-        <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
+        <td><a href="javascript:showClassDetail('c2',2)">详情</a></td>
         <td>&nbsp;</td>
     </tr>
 
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_02_seFramework</div></td>
-    <td colspan='5' align='center'>
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_search: 测试搜索的演示-03</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
 
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
-        错误</a>
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_search: 测试搜索的演示-04</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
 
-    <div id='div_ft2.1' class="popup_window">
-        <pre>ft2.1: ImportError: Failed to import test module: test_02_seFramework
-Traceback (most recent call last):
-  File "D:\Programs\Python\Python37\lib\unittest\loader.py", line 434, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Programs\Python\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
-    __import__(name)
-  File "d:\python_code\UI-framework\testcase\test_02_seFramework.py", line 12, in &lt;module&gt;
-    from tools.HTMLTestRunner_CN_Chart_Screen import HTMLTestRunner
-ModuleNotFoundError: No module named 'tools'
+    <tr class='passClass'>
+        <td>test_03_seFramework.TestSearch03: 测试类03</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+        <td><a href="javascript:showClassDetail('c3',2)">详情</a></td>
+        <td>&nbsp;</td>
+    </tr>
 
-</pre>
-    </div>
-    <!--css div popup end-->
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_search: 测试搜索的演示-05</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
 
-    </td>
-    <td>无截图</td>
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06_search: 测试搜索的演示-06</div></td>
+    <td colspan='5' align='center'>通过</td>
 </tr>
 
         <tr id='total_row'>
             <th>总计</th>
-            <th>3</th>
-            <th>2</th>
+            <th>6</th>
+            <th>6</th>
             <th>0</th>
-            <th>1</th>
+            <th>0</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
         </tr>
@@ -440,9 +443,9 @@ ModuleNotFoundError: No module named 'tools'
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
+                        {value:6, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:1, name:'错误'}
+                        {value:0, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

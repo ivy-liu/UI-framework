@@ -13,13 +13,6 @@ casePath=base_path+"\\testcase\\"
 result=base_path+'\\report\\'
 # print('result--',result)
 
-def gettime():
-    nowtime=time.strftime("%Y-%m-%d_%H%M%S", time.localtime())
-    return nowtime
-def getday():
-    day=day=time.strftime('%Y-%m-%d', time.localtime())
-    return day
-
 def CreatSuite():
     #定义单元测试容器
     testUnit=unittest.TestSuite()
@@ -30,18 +23,32 @@ def CreatSuite():
         for caseName in testSuite:
             print(caseName)
             testUnit.addTest(caseName)
-            time.sleep(2)
+            time.sleep(4)
+            # print('testUnit---',testUnit)报错原因，py文件名中有一个空格
+            
     return testUnit
 
+
 testCase=CreatSuite()
+
+
+
+def gettime():
+    nowtime=time.strftime("%Y-%m-%d_%H%M%S", time.localtime())
+    return nowtime
+def getday():
+    day=day=time.strftime('%Y-%m-%d', time.localtime())
+    return day
+
+
 #获取系统当前时间
 now=gettime()
 day=getday()
 #定义单个测试报告存放地址
 single_report=result+'\\'+day
-
+fileName=single_report+'\\'+now+'_result.html'
 if os.path.exists(single_report):
-    fileName=single_report+'\\'+now+'_result.html'
+    
     fp=open(fileName,'wb')
     try:
         #定义报告

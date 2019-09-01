@@ -308,9 +308,9 @@ function hide_img(obj){
         
     <div class='page-header'>
         <h1>UI自动化测试demo报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-08-31 23:30:22</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:32.940518</p>
-<p class='attribute'><strong>状态:</strong> 通过 2 错误 1</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-09-01 13:46:59</p>
+<p class='attribute'><strong>运行时长:</strong> 0:01:09.645193</p>
+<p class='attribute'><strong>状态:</strong> 通过 3 错误 1</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>描述test试试</p></div>
@@ -343,54 +343,43 @@ function hide_img(obj){
             <th>截图</th>
         </tr>
         
-    <tr class='passClass'>
-        <td>test_01_seFramework.TestSearch01: 测试类</td>
+    <tr class='errorClass'>
+        <td>test_01_seFramework.TestSearch01: 测试类01</td>
         <td>2</td>
-        <td>2</td>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
+        <td>1</td>
         <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
         <td>&nbsp;</td>
     </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_01_search: 测试搜索的演示01</div></td>
+    <td class='none'><div class='testcase'>test_01_search: 测试搜索的演示-01</div></td>
     <td colspan='5' align='center'>通过</td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_02_search: 测试搜索的演示02</div></td>
-    <td colspan='5' align='center'>通过</td>
-</tr>
-
-    <tr class='errorClass'>
-        <td>unittest.loader._FailedTest</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td>1</td>
-        <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
-        <td>&nbsp;</td>
-    </tr>
-
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_02_seFramework</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_02_search: 测试搜索的演示-02</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
         错误</a>
 
-    <div id='div_ft2.1' class="popup_window">
-        <pre>ft2.1: ImportError: Failed to import test module: test_02_seFramework
-Traceback (most recent call last):
-  File "D:\Programs\Python\Python37\lib\unittest\loader.py", line 434, in _find_test_path
-    module = self._get_module_from_name(name)
-  File "D:\Programs\Python\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
-    __import__(name)
-  File "d:\python_code\UI-framework\testcase\test_02_seFramework.py", line 12, in &lt;module&gt;
-    from tools.HTMLTestRunner_CN_Chart_Screen import HTMLTestRunner
-ModuleNotFoundError: No module named 'tools'
+    <div id='div_ft1.2' class="popup_window">
+        <pre>ft1.2: Traceback (most recent call last):
+  File "d:\python_code\UI-framework\testcase\test_01_seFramework.py", line 32, in test_02_search
+    self.driver.find_element("id","words").send_keys("脱口秀")
+  File "D:\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
+    'value': keys_to_typing(value)})
+  File "D:\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=76.0.3809.132)
 
 </pre>
     </div>
@@ -400,10 +389,30 @@ ModuleNotFoundError: No module named 'tools'
     <td>无截图</td>
 </tr>
 
+    <tr class='passClass'>
+        <td>test_02_seFramework.TestSearch02: 测试类02</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+        <td><a href="javascript:showClassDetail('c2',2)">详情</a></td>
+        <td>&nbsp;</td>
+    </tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_search: 测试搜索的演示-03</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_search: 测试搜索的演示-04</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
         <tr id='total_row'>
             <th>总计</th>
+            <th>4</th>
             <th>3</th>
-            <th>2</th>
             <th>0</th>
             <th>1</th>
             <th>&nbsp;</th>
@@ -440,7 +449,7 @@ ModuleNotFoundError: No module named 'tools'
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
+                        {value:3, name:'通过'},
                         {value:0, name:'失败'},
                         {value:1, name:'错误'}
                     ],
