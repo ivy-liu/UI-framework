@@ -7,8 +7,7 @@ import time
 
 '''
 该类主要是完成所有页面的一些公共方法的封装
-其实说白了就是把原生态的多个方法组装或者改改用
-这里的内容可以根据需要自行修改，不是标准，仅提供思路
+
 '''
 class BasePage(object):
 
@@ -64,6 +63,7 @@ class BasePage(object):
 
         by = element.split("--")[0].strip()
         value = element.split("--")[1].strip()
+        # print('by-value:',by,'-',value)
 
         if by == "id":
             element = self.driver.find_element_by_id(value)
@@ -78,7 +78,7 @@ class BasePage(object):
         elif by == "css":
             element = self.driver.find_element_by_css_selector(value)
         else:
-            raise NameError("元素属性不对，可以识别的有：'id','name','class_name','link_text','xpaht','css'")
+            raise NameError("元素属性不对，可以识别的有：'id','name','class_name','link_text','xpath','css'")
         return element
 
 
@@ -128,6 +128,7 @@ class BasePage(object):
         无
     '''
     def click_submit(self,element,click=True):
+        # print('element-',element)
         try:
             ge=self.get_element(element)
             if click:
@@ -282,7 +283,7 @@ url = "http://www.xqtesting.com"
 driver = webdriver.Firefox()
 bp = BasePage(driver)
 bp.open_max(url)
-bp.input('id--words','小强测试品牌')
+bp.input('id--words','输入测试文字')
 bp.click_submit('class name--btn-default')
 time.sleep(5)
 bp.quit()

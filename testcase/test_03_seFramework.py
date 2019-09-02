@@ -42,6 +42,7 @@ class TestSearch03(unittest.TestCase):
         sp.input_keyword_run(self.base_url,keywords)
         try:
             self.assertIn(keywords,sp.return_title(),'查询失败')
+            print('成功，搜索的关键字=',keywords)
         except Exception as e:
             print(e)
             self.imgs.append(self.driver.get_screenshot_as_base64())
@@ -53,7 +54,7 @@ class TestSearch03(unittest.TestCase):
         sp.input_keyword_run(self.base_url,keywords)
         try:
             self.assertIn(keywords,'2','查询失败')
-            print('成功，搜索的关键字=',keywords)
+            print('失败，搜索的关键字=',keywords)
         except Exception as e:
             print(e)
             self.imgs.append(self.driver.get_screenshot_as_base64())

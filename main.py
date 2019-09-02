@@ -21,7 +21,7 @@ def CreatSuite():
     #把用例加入容器
     for testSuite in discover:
         for caseName in testSuite:
-            print(caseName)
+            # print(caseName)
             testUnit.addTest(caseName)
             time.sleep(4)
             # print('testUnit---',testUnit)报错原因，py文件名中有一个空格
